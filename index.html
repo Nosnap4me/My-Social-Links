@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Social Links</title>
+    <style>
+        :root {
+            --background-color: #1a1a1a;
+            --text-color: #f0f2f5;
+            --link-background: #444;
+            --link-background-hover: #666;
+            --card-background: #2a2a2a;
+            --card-shadow: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            text-align: center;
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--card-shadow);
+            padding: 40px;
+            max-width: 400px;
+            width: 90%;
+            transition: transform 0.3s;
+        }
+
+        .container:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            border: 2px solid #f0f2f5;
+        }
+
+        .link {
+            display: block;
+            background-color: var(--link-background);
+            color: #fff;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+
+        .link:hover {
+            background-color: var(--link-background-hover);
+        }
+
+        .link::before {
+            content: "";
+            background-image: url('https://via.placeholder.com/30');
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        /* Uncomment below to enable dark/light mode toggle */
+        /*
+        .toggle-button {
+            cursor: pointer;
+            background-color: transparent;
+            border: 2px solid var(--text-color);
+            border-radius: 5px;
+            color: var(--text-color);
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .toggle-button:hover {
+            background-color: var(--text-color);
+            color: var(--background-color);
+        }
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Uncomment below to enable dark/light mode toggle -->
+        <!-- <button class="toggle-button" id="theme-toggle">Toggle Dark/Light Mode</button> -->
+        <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+        <h1>My Social Links</h1>
+        <a class="link" href="https://twitter.com" target="_blank">Twitter</a>
+        <a class="link" href="https://facebook.com" target="_blank">Facebook</a>
+        <a class="link" href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a class="link" href="https://instagram.com" target="_blank">Instagram</a>
+        <footer>© 2024 Your Name</footer>
+    </div>
+
+    <script>
+        // Uncomment below to enable dark/light mode toggle functionality
+        /*
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+        });
+        */
+    </script>
+</body>
+</html>
